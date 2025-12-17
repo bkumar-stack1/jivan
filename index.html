@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>30問計算タイムアタック</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>30問計算チャレンジ</h1>
+        <div id="start-screen">
+            <p>30問の計算をどれだけ早く解けるか挑戦しよう！</p>
+            <button id="start-btn">スタート！</button>
+        </div>
+
+        <div id="game-screen" class="hidden">
+            <div class="stats">
+                <span>問題: <span id="question-num">1</span> / 30</span>
+                <span>タイム: <span id="timer">0.0</span>s</span>
+            </div>
+            <div id="question" class="question-text">? + ? =</div>
+            <input type="number" id="answer-input" placeholder="答えを入力" autofocus>
+            <p id="message"></p>
+        </div>
+
+        <div id="result-screen" class="hidden">
+            <h2>結果発表</h2>
+            <p>タイム: <span id="final-time">0</span> 秒</p>
+            <button onclick="location.reload()">もう一度遊ぶ</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
